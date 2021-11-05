@@ -1,0 +1,5 @@
+rootProject.name = 'DDSpring'
+include 'spring-context'
+include 'spring-core'
+include 'spring-beans'
+

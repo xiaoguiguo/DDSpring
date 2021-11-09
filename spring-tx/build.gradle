@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+apply plugin: "java"
+
+dependencies {
+    implementation project(":spring-core")
+    implementation project(":spring-beans")
+    implementation project(":spring-jcl")
+
+    implementation group: 'javax.resource', name: 'javax.resource-api', version: '1.7-b01'
+
+//    implementation("javax.resource:javax.resource-api")
+//    optional("javax.resource:javax.resource-api")
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+}
+
+test {
+    useJUnitPlatform()
+}
